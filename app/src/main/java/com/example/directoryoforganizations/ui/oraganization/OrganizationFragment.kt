@@ -24,11 +24,16 @@ class OrganizationFragment : Fragment(R.layout.organization_fragment) {
         super.onViewCreated(view, savedInstanceState)
         adapter.setOnItemClickListener {
             var mIntent = Intent(requireActivity(), DetailActivity::class.java)
-            mIntent.putExtra(DetailActivity.ORGANIZATION_ID,it)
+            mIntent.putExtra(DetailActivity.ORGANIZATION_ID, it)
             startActivity(mIntent)
         }
         recyclerView.adapter = adapter
-        recyclerView.addItemDecoration(DividerItemDecoration(requireContext(),LinearLayoutManager.VERTICAL))
+        recyclerView.addItemDecoration(
+            DividerItemDecoration(
+                requireContext(),
+                LinearLayoutManager.VERTICAL
+            )
+        )
         val type = requireArguments().getInt(MainActivity.TYPE_ID)
         dao = OrganizationDatabase.getInstance(requireContext()).dao()
         presenter = OrganizationPresenter(dao)

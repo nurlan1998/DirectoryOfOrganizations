@@ -8,95 +8,103 @@
 
     <TextView
         android:id="@+id/tvName"
-        android:text="@string/name_organization"
-        android:layout_marginTop="@dimen/margin_standard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_standard"
+        android:layout_marginTop="@dimen/margin_standard"
         android:layout_marginEnd="@dimen/margin_standard"
         android:padding="@dimen/padding"
-        android:textStyle="bold"
+        android:text="@string/name_organization"
         android:textSize="25sp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/tv_about_organization"
-        app:layout_constraintTop_toBottomOf="@id/tvName"
-        android:layout_marginTop="@dimen/margin_standard_top_detail"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="@dimen/margin_standard"
-        android:text="Об организации"
-        android:textStyle="bold"
-        android:textSize="20sp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_standard"
+        android:layout_marginTop="@dimen/margin_standard_top_detail"
+        android:text="Об организации"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvName" />
+
     <TextView
         android:id="@+id/tvAboutOrganization"
-        app:layout_constraintTop_toBottomOf="@id/tv_about_organization"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_standard"
         android:layout_marginTop="8dp"
         android:textSize="15sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_about_organization" />
+
     <TextView
         android:id="@+id/tv_phone_number"
-        app:layout_constraintTop_toBottomOf="@id/tvAboutOrganization"
-        android:layout_marginTop="@dimen/margin_standard"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        android:text="@string/detail_phone_number"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="@dimen/margin_standard"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_standard"
+        android:layout_marginTop="@dimen/margin_standard"
+        android:text="@string/detail_phone_number"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAboutOrganization" />
+
     <ImageView
         android:id="@+id/ivPhone"
-        app:layout_constraintTop_toBottomOf="@id/tv_phone_number"
-        app:layout_constraintEnd_toStartOf="@id/tvPhoneNumber"
-        android:src="@drawable/ic_phone_black_24dp"
-        android:padding="8dp"
-        app:layout_constraintStart_toStartOf="@id/tv_phone_number"
         android:layout_width="40dp"
-        android:layout_height="40dp"/>
+        android:layout_height="40dp"
+        android:padding="8dp"
+        android:src="@drawable/ic_phone_black_24dp"
+        app:layout_constraintEnd_toStartOf="@id/tvPhoneNumber"
+        app:layout_constraintStart_toStartOf="@id/tv_phone_number"
+        app:layout_constraintTop_toBottomOf="@id/tv_phone_number" />
+
     <TextView
         android:id="@+id/tvPhoneNumber"
-        app:layout_constraintTop_toTopOf="@id/ivPhone"
-        android:padding="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
+        android:padding="8dp"
         android:textSize="15sp"
         app:layout_constraintStart_toEndOf="@id/ivPhone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        app:layout_constraintTop_toTopOf="@id/ivPhone" />
+
     <TextView
         android:id="@+id/tv_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_standard"
+        android:layout_marginTop="@dimen/margin_standard"
         android:text="@string/address_organization"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/tvPhoneNumber"
-        android:layout_marginTop="@dimen/margin_standard"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="@dimen/margin_standard"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        app:layout_constraintTop_toBottomOf="@id/tvPhoneNumber" />
+
     <ImageView
         android:id="@+id/ivAddress"
-        app:layout_constraintTop_toTopOf="@id/tvAddress"
-        android:src="@drawable/ic_location_on_black_24dp"
-        android:padding="8dp"
-        app:layout_constraintStart_toStartOf="@id/tv_address"
-        app:layout_constraintEnd_toStartOf="@id/tvAddress"
         android:layout_width="40dp"
-        android:layout_height="40dp"/>
+        android:layout_height="40dp"
+        android:padding="8dp"
+        android:src="@drawable/ic_location_on_black_24dp"
+        app:layout_constraintEnd_toStartOf="@id/tvAddress"
+        app:layout_constraintStart_toStartOf="@id/tv_address"
+        app:layout_constraintTop_toTopOf="@id/tvAddress" />
+
     <TextView
         android:id="@+id/tvAddress"
-        app:layout_constraintTop_toBottomOf="@id/tv_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:padding="8dp"
-        app:layout_constraintStart_toEndOf="@id/ivAddress"
         android:textSize="15sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        app:layout_constraintStart_toEndOf="@id/ivAddress"
+        app:layout_constraintTop_toBottomOf="@id/tv_address" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,14 +8,14 @@ import com.example.directoryoforganizations.data.dao.OrganizationDao
 import com.example.directoryoforganizations.data.model.Organization
 import kotlinx.android.synthetic.main.activity_detail.*
 
-class DetailActivity : AppCompatActivity(),DetailView {
+class DetailActivity : AppCompatActivity(), DetailView {
 
-    companion object{
+    companion object {
         const val ORGANIZATION_ID = "organizationId"
     }
 
     private var organizationId: Int = 0
-    private lateinit var dao:OrganizationDao
+    private lateinit var dao: OrganizationDao
     private lateinit var currentOrganization: Organization
     private lateinit var presenter: DetailPresenter
 
@@ -24,8 +24,8 @@ class DetailActivity : AppCompatActivity(),DetailView {
         setContentView(R.layout.activity_detail)
 
         dao = OrganizationDatabase.getInstance(this).dao()
-        presenter = DetailPresenter(dao,this)
-        organizationId = intent.getIntExtra(ORGANIZATION_ID,0)
+        presenter = DetailPresenter(dao, this)
+        organizationId = intent.getIntExtra(ORGANIZATION_ID, 0)
         presenter.getOrganizationById(organizationId)
     }
 
