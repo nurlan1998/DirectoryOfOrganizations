@@ -9,9 +9,13 @@
 
     <string name="menu_hotel">Гостиница</string>
     <string name="menu_insurance">Страхование</string>
+    <string name="menu_ministry">Министерство</string>
     <string name="menu_bank">Банк</string>
     <string name="menu_prosecutors_tax">Прократура,Налоговые</string>
     <string name="menu_hospital">Клинические больницы</string>
 
     <string name="home_second">Home Second</string>
+    <string name="name_organization">Название организации</string>
+    <string name="detail_phone_number">Телефон доверия</string>
+    <string name="address_organization">"Адрес организаций "</string>
 </resources>

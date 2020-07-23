@@ -16,6 +16,11 @@ class OrganizationListAdapter : RecyclerView.Adapter<OrganizationListAdapter.Org
         notifyDataSetChanged()
     }
 
+    var onItemClick: (organizationId: Int) -> Unit = {}
+    fun setOnItemClickListener(onItemClick: (organizationId: Int) ->Unit){
+        this.onItemClick = onItemClick
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): OrganizationListViewHolder {
         var view =LayoutInflater.from(parent.context).inflate(R.layout.organization_item,parent,false)
         return OrganizationListViewHolder(view)
@@ -33,6 +38,9 @@ class OrganizationListAdapter : RecyclerView.Adapter<OrganizationListAdapter.Org
         fun populate(organization: Organization){
             itemView.tvName.text = organization.nameOrganizations
             itemView.tvAbout.text = organization.aboutOrganization
+            itemView.setOnClickListener {
+                onItemClick.invoke(organization.id)
+            }
         }
     }
 }

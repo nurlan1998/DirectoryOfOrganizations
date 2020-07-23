@@ -14,8 +14,11 @@
             android:id="@+id/nav_prosecutors"
             android:title="@string/menu_prosecutors_tax" />
         <item
-            android:id="@+id/nav_ministries"
+            android:id="@+id/nav_insurance"
             android:title="@string/menu_insurance" />
+        <item
+            android:id="@+id/nav_ministry"
+            android:title="@string/menu_ministry" />
         <item
             android:id="@+id/nav_hospital"
             android:title="@string/menu_hospital" />

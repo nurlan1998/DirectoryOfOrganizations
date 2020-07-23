@@ -12,8 +12,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.RecyclerView
 import com.example.directoryoforganizations.R
 import com.example.directoryoforganizations.ui.oraganization.OrganizationFragment
+import kotlinx.android.synthetic.main.organization_fragment.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,6 +25,9 @@ class MainActivity : AppCompatActivity() {
         const val HOTEL = 1
         const val INSURANCE = 2
         const val BANK = 3
+        const val PROSECUTORS = 4
+        const val MINISTRY = 5
+        const val HOSPITAL = 6
     }
 
     private lateinit var appBarConfiguration: AppBarConfiguration
@@ -32,11 +38,6 @@ class MainActivity : AppCompatActivity() {
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
 
-        val fab: FloatingActionButton = findViewById(R.id.fab)
-        fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
-        }
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         val navView: NavigationView = findViewById(R.id.nav_view)
         val toggle = ActionBarDrawerToggle(this,drawerLayout,toolbar,
@@ -59,9 +60,34 @@ class MainActivity : AppCompatActivity() {
                     mFragment = OrganizationFragment()
                     mBundle.putInt(TYPE_ID, HOTEL)
                     mFragment.arguments = mBundle
-                }else -> {
-                return@setNavigationItemSelectedListener false
+                }
+                R.id.nav_insurance -> {
+                    mFragment = OrganizationFragment()
+                    mBundle.putInt(TYPE_ID, INSURANCE)
+                    mFragment.arguments = mBundle
+                }
+                R.id.bank -> {
+                    mFragment = OrganizationFragment()
+                    mBundle.putInt(TYPE_ID, BANK)
+                    mFragment.arguments = mBundle
+                }
+                R.id.nav_prosecutors -> {
+                    mFragment = OrganizationFragment()
+                    mBundle.putInt(TYPE_ID, PROSECUTORS)
+                    mFragment.arguments = mBundle
+                }
+                R.id.nav_hospital -> {
+                    mFragment = OrganizationFragment()
+                    mBundle.putInt(TYPE_ID, HOSPITAL)
+                    mFragment.arguments = mBundle
+                }
+                R.id.nav_ministry ->{
+                    mFragment = OrganizationFragment()
+                    mBundle.putInt(TYPE_ID, MINISTRY)
+                    mFragment.arguments = mBundle
             }
+                else -> {
+                return@setNavigationItemSelectedListener false }
             }
             supportFragmentManager.beginTransaction().replace(R.id.fragment_container,mFragment)
                 .commit()
