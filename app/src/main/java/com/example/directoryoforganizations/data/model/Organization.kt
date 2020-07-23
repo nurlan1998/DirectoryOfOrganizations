@@ -10,7 +10,7 @@ data class Organization(
     val id: Int,
 
     @ColumnInfo(name = "type")
-    val type: Int,
+    val type: String,
 
     @ColumnInfo(name = "nameOrganizations")
     val nameOrganizations: String,
